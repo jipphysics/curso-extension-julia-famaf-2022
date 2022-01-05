@@ -2,10 +2,10 @@
 
 ## Profesores
 
-- Dr. Oscar Reula,
+- Dr. Oscar Reula, [oreula@unc.edu.ar](oreula@unc.edu.ar)
 
-- Dr. Edgardo Bonzi,
+- Dr. Edgardo Bonzi, [edgardobonzi@gmail.com](edgardobonzi@gmail.com)
 
-- Dr. Juan I. Perotti, [mailto](mailto:email@example.com)
+- Dr. Juan I. Perotti, [juan.perotti@unc.edu.ar](juan.perotti@unc.edu.ar)
 
-- Lic. Pablo E. Montes.
+- Lic. Pablo E. Montes, [pabloemontes@gmail.com](pabloemontes@gmail.com)
