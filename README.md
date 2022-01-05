@@ -6,9 +6,25 @@ Dictado como curso de extensión de la Facultad de Matemáticas, Astronomía, F�
 
 El curso está orientado a estudiantes de 2do año en adelante en carreras afines a la programación científica: física, astronomía, matemática, computación, ingenierías, química, biología, sociología, economía, etc.
 
+## Novedades
+
+Las inscripciones se encuentran abiertas.
+
 ## Inscripción
 
 Las inscripciones estan abiertas hasta el Lunes 21 de Febrero de 2022, y deben realizarse via el siguiente [formulario de inscripción](https://docs.google.com/forms/d/1-hYOGc-jx0sibf9etlO81Mbv-KfsGqPw240R7wiBa-4/prefill).
+
+El curso posee un cupo máximo de 100 alumnos.
+
+## Requisitos
+
+Los estudiantes deberán tener:
+
+- Conocimientos previos de programación, preferentemente en alguno de los siguientes lenguajes: Julia, Python, Fortran, C, C++, R y/o Matlab.
+
+- Conocimientos elementales de LaTeX.
+
+- Conocimientos elementales de algebra lineal, análisis matemático y, preferentemente, que incluyan conocimientos elementales en la resolución de ecuaciones diferenciales.
 
 ## Profesores
 
@@ -26,4 +42,4 @@ Todas las clases se dictarán por video conferencia a través de salas de google
 
 ## Programa del curso
 
-
+Para mayor información, lea el [programa tentativo](https://drive.google.com/file/d/1bP7fOeJiQx999AnlGOw3oKL2CMiM7k0-/view?usp=sharing) del curso.
