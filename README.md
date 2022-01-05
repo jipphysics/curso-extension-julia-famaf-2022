@@ -23,10 +23,10 @@ Los estudiantes deberán tener:
 - Conocimientos previos de programación, preferentemente en alguno de los siguientes lenguajes: Julia, Python, Fortran, C, C++, R y/o Matlab.
 
 - Conocimientos elementales de:
-  - elementos de algebra lineal, 
-  - elementos de cálculo de una y varias variables,
-  - elementos de probabilid y estadística,
-  - y, preferentemente, elementales en la resolución de ecuaciones diferenciales.
+  - algebra lineal, 
+  - cálculo de una y varias variables,
+  - probabilid y estadística, y
+  - preferentemente, ecuaciones diferenciales ordinarias y parciales.
 
 - Conocimientos elementales de LaTeX.
 
