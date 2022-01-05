@@ -1,4 +1,8 @@
-# Curso de Extension de Julia - FAMAF (2022)
+# Curso de extensión - Julia científico - FAMAF (2022)
+
+Curso sobre el lenguaje de programación **Julia** [https://julialang.org/](https://julialang.org/) para usos científicos.
+
+Dictado como curso de extensión de la Facultad de Matemáticas, Astronomía, Física y Computación de la Universidad Nacional de Córdoba (FAMAF-UNC).
 
 ## Profesores
 
