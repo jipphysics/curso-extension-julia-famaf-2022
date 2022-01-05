@@ -14,11 +14,9 @@ El curso está orientado a estudiantes de 2do año en adelante de carreras afine
 
 Las inscripciones estarán abiertas hasta el Lunes 21 de Febrero de 2022, y deben realizarse via el siguiente [formulario de inscripción](https://docs.google.com/forms/d/1-hYOGc-jx0sibf9etlO81Mbv-KfsGqPw240R7wiBa-4/prefill).
 
-El curso posee un cupo máximo de 100 alumnos.
+El curso posee un cupo máximo de 100 alumnos. Si el número de inscriptos supera el cupo, se recurrirá a un proceso de selección basado en el siguiente [criterio de selección](https://docs.google.com/document/d/10OwpXtlybIlmYAKn5CIKOpll0pWEm1MmwwdrGSvHiSw/edit?usp=sharing).
 
 ## Requisitos
-
-Los estudiantes deberán tener:
 
 - Conocimientos previos de programación, preferentemente en alguno de los siguientes lenguajes: Julia, Python, Fortran, C, C++, R y/o Matlab.
 
@@ -32,13 +30,13 @@ Los estudiantes deberán tener:
 
 ## Profesores
 
-- Dr. Oscar Reula, [oreula@unc.edu.ar](oreula@unc.edu.ar)
+- Dr. Oscar A. Reula, [oreula@unc.edu.ar](oreula@unc.edu.ar)
 
-- Dr. Edgardo Bonzi, [edgardobonzi@gmail.com](edgardobonzi@gmail.com)
+- Dr. Edgardo Bonzi, [edgardo.bonzi@unc.edu.ar](edgardo.bonzi@unc.edu.ar)
 
 - Dr. Juan I. Perotti, [juan.perotti@unc.edu.ar](juan.perotti@unc.edu.ar)
 
-- Lic. Pablo E. Montes, [pabloemontes@gmail.com](pabloemontes@gmail.com)
+- Lic. Pablo E. Montes, [pabloemontes@mi.unc.edu.ar](pabloemontes@mi.unc.edu.ar)
 
 ## Modalidad
 
