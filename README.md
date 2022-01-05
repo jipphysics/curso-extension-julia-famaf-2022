@@ -8,7 +8,7 @@ El curso está orientado a estudiantes de 2do año en adelante de carreras afine
 
 ## Novedades
 
-Las inscripciones se encuentran abiertas.
+- 2022 02 01 : Las inscripciones se encuentran abiertas.
 
 ## Inscripción
 
