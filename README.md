@@ -4,7 +4,7 @@ Curso de programación científica en **Julia** [https://julialang.org/](https:/
 
 Dictado como curso de extensión de la Facultad de Matemáticas, Astronomía, Física y Computación de la Universidad Nacional de Córdoba (FAMAF-UNC).
 
-El curso está orientado a estudiantes de 2do año en adelante en carreras afines a la programación científica: física, astronomía, matemática, computación, ingenierías, química, biología, sociología, economía, etc.
+El curso está orientado a estudiantes de 2do año en adelante de carreras afines a la programación científica: física, astronomía, matemática, computación, ingenierías, química, biología, sociología, economía, etc.
 
 ## Novedades
 
@@ -22,9 +22,9 @@ Los estudiantes deberán tener:
 
 - Conocimientos previos de programación, preferentemente en alguno de los siguientes lenguajes: Julia, Python, Fortran, C, C++, R y/o Matlab.
 
-- Conocimientos elementales de LaTeX.
-
 - Conocimientos elementales de algebra lineal, análisis matemático y, preferentemente, que incluyan conocimientos elementales en la resolución de ecuaciones diferenciales.
+
+- Conocimientos elementales de LaTeX.
 
 ## Profesores
 
