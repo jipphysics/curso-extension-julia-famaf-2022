@@ -16,7 +16,7 @@ Las inscripciones estarán abiertas hasta el Lunes 21 de Febrero de 2022, y debe
 
 El curso posee un cupo máximo de 100 alumnos. Si el número de inscriptos supera el cupo, se recurrirá a un proceso de selección basado en el siguiente [criterio de selección](https://docs.google.com/document/d/10OwpXtlybIlmYAKn5CIKOpll0pWEm1MmwwdrGSvHiSw/edit?usp=sharing).
 
-Dado que se espera un gran número de aspirantes y el cupo estará limitado, pedimos encarecidamente que no se inscriban si no estan seguros de poder dedicar el tiempo y la energía necesarias para el cursado.
+Dado que se espera un gran número de aspirantes y el cupo estará limitado, pedimos encarecidamente que no se inscriban de no estar seguros de poder dedicarle al curso el tiempo y la energía necesarias para aprovecharlo.
 
 ## Requisitos
 
