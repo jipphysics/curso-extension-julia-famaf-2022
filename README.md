@@ -28,7 +28,7 @@ Dado que se espera un gran número de aspirantes y el cupo estará limitado, ped
   - probabilid y estadística, y
   - preferentemente, ecuaciones diferenciales ordinarias y parciales.
 
-- Conocimientos elementales de LaTeX.
+Recomendamos, además, conocimientos elementales de LaTeX.
 
 ## Profesores
 
