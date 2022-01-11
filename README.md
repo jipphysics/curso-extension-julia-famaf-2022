@@ -44,8 +44,8 @@ Dado que se espera un gran número de aspirantes y el cupo estará limitado, ped
 
 Todas las clases se dictarán por video conferencia a través de salas de google meet.
 
-Consistirán de 20 mini-clases de aproximadamente una hora cada una.
-Se dictarán 4 mini-clases por día, dos de 13hs a 15hs y dos de 18hs a 20hs.
+Consistirán de 20 clases de aproximadamente una hora cada una.
+Se dictarán 4 clases por día, dos de 13hs a 15hs y dos de 18hs a 20hs.
 
 ## Programa del curso
 
