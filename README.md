@@ -1,10 +1,8 @@
-# Curso de extensión - programación científica en Julia - FAMAF (2022)
+# Curso de extensión - Introducción a la programación en Julia con aplicaciones científicas - FAMAF (2022)
 
-Curso de programación científica en **Julia** [https://julialang.org/](https://julialang.org/). 
+El curso *Introducción a la programación en* **Julia** ([https://julialang.org/](https://julialang.org/)) *con aplicaciones científicas*, está orientado a estudiantes de 2do año en adelante de carreras afines a la programación científica: física, astronomía, matemática, computación, ingenierías, química, biología, sociología, economía, etc.
 
-Dictado como curso de extensión de la Facultad de Matemáticas, Astronomía, Física y Computación de la Universidad Nacional de Córdoba (FAMAF-UNC).
-
-El curso está orientado a estudiantes de 2do año en adelante de carreras afines a la programación científica: física, astronomía, matemática, computación, ingenierías, química, biología, sociología, economía, etc.
+Será dictado como curso de extensión de la Facultad de Matemáticas, Astronomía, Física y Computación de la Universidad Nacional de Córdoba (FAMAF-UNC).
 
 ## Novedades
 
