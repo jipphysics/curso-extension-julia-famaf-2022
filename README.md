@@ -38,14 +38,13 @@ Recomendamos, además, conocimientos elementales de LaTeX.
 
 - Dr. Juan I. Perotti, [juan.perotti@unc.edu.ar](juan.perotti@unc.edu.ar)
 
-- Lic. Pablo E. Montes, [pabloemontes@mi.unc.edu.ar](pabloemontes@mi.unc.edu.ar)
+- Mag. Pablo E. Montes, [pabloemontes@mi.unc.edu.ar](pabloemontes@mi.unc.edu.ar)
 
 ## Modalidad
 
 Todas las clases se dictarán por video conferencia a través de salas de google meet.
-
-Consistirán de 20 clases de aproximadamente una hora.
-Se dictarán 4 clases por día, de 17hs a 21hs (horario sujeto a posibles cambios) y, estimativamente, en la semana del 28 de Febrero hasta el 4 de Marzo.
+Consistirán de 20 clases de aproximadamente una hora cada una.
+Se dictarán 4 clases por día, de 17hs a 21hs y en la semana del 28 de Febrero hasta el 4 de Marzo (horarios y fechas sujetas a posibles cambios).
 
 ## Programa del curso
 
