@@ -12,7 +12,7 @@ El curso está orientado a estudiantes de 2do año en adelante de carreras afine
 
 ## Inscripción
 
-Las inscripciones estarán abiertas hasta el Lunes 21 de Febrero de 2022, y deben realizarse via el siguiente [formulario de inscripción](https://docs.google.com/forms/d/1-hYOGc-jx0sibf9etlO81Mbv-KfsGqPw240R7wiBa-4/prefill).
+Las inscripciones estarán abiertas hasta el Lunes 21 de Febrero de 2022, y deben realizarse via el siguiente [formulario de inscripción](https://forms.gle/ZA4ByWUeiuWrY6vp9).
 
 El curso posee un cupo máximo de 100 alumnos. Si el número de inscriptos supera el cupo, se recurrirá a un proceso de selección basado en el siguiente [criterio de selección](https://docs.google.com/document/d/10OwpXtlybIlmYAKn5CIKOpll0pWEm1MmwwdrGSvHiSw/edit?usp=sharing).
 
