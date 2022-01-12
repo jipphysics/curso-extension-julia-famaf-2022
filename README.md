@@ -1,10 +1,11 @@
 # Curso de extensión - Introducción a la programación en Julia con aplicaciones científicas - FAMAF (2022)
 
-Esta es la página del curso **Introducción a la programación en Julia con aplicaciones científicas**.
+Julia, [https://julialang.org/](https://julialang.org/), es un lenguaje de programación moderno (nacido en 2012) orientado a la propagación científica y de código abierto.
+Gracias a sus capacidades metalingüísticas, Julia presenta facilidades propias de lenguajes interpretados tales como Python (facilidad de uso, portabilidad, interoperabilidad, etc.), pero con velocidades de cálculo similares a las de Fortran, C y C++.
+
+Esta es la página del curso de extensión **Introducción a la programación en Julia con aplicaciones científicas**.
 El mismo está orientado a estudiantes de 2do año en adelante de carreras afines a la programación científica: física, astronomía, matemática, computación, ingenierías, química, biología, sociología, economía, etc.
 El mismo será dictado como curso de extensión de la Facultad de Matemáticas, Astronomía, Física y Computación de la Universidad Nacional de Córdoba (FAMAF-UNC).
-
-Julia, [https://julialang.org/](https://julialang.org/), es un lenguaje de programación moderno (nacido en 2012) orientado a la propagación científica y de código abierto.
 
 ## Novedades
 
@@ -17,6 +18,7 @@ Las inscripciones estarán abiertas hasta el Lunes 21 de Febrero de 2022, y debe
 El curso posee un cupo máximo de 100 alumnos. Si el número de inscriptos supera el cupo, se recurrirá a un proceso de selección basado en el siguiente [criterio de selección](https://docs.google.com/document/d/10OwpXtlybIlmYAKn5CIKOpll0pWEm1MmwwdrGSvHiSw/edit?usp=sharing).
 
 Dado que se espera un gran número de aspirantes y el cupo estará limitado, pedimos encarecidamente que no se inscriban de no estar seguros de poder dedicarle al curso el tiempo y la energía necesarias para aprovecharlo.
+Tener en cuenta que el curso volverá a dictarse en el segundo cuatrimestre del presente año.
 
 ## Requisitos
 
