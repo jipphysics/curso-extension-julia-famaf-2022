@@ -45,7 +45,7 @@ Recomendamos, además, conocimientos elementales de LaTeX.
 Todas las clases se dictarán por video conferencia a través de salas de google meet.
 
 Consistirán de 20 clases de aproximadamente una hora.
-Se dictarán 4 clases por día, de 17hs a 21hs (posiblemente sujeto a cambios).
+Se dictarán 4 clases por día, de 17hs a 21hs (horario sujeto a posibles cambios) y, estimativamente, en la semana del 28 de Febrero hasta el 4 de Marzo.
 
 ## Programa del curso
 
