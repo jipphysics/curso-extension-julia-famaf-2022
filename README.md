@@ -45,7 +45,7 @@ Recomendamos, además, conocimientos elementales de LaTeX.
 Todas las clases se dictarán por video conferencia a través de salas de google meet.
 
 Consistirán de 20 clases de aproximadamente una hora.
-Se dictarán 4 clases por día, dos de 13hs a 15hs y dos de 18hs a 20hs.
+Se dictarán 4 clases por día, de 17hs a 21hs (posiblemente sujeto a cambios).
 
 ## Programa del curso
 
