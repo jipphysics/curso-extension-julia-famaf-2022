@@ -1,6 +1,6 @@
 # Curso de extensión - Introducción a la programación en Julia con aplicaciones científicas - FAMAF (2022)
 
-Julia, [https://julialang.org/](https://julialang.org/), es un lenguaje de programación moderno (nacido en 2012) orientado a la propagación científica y de código abierto.
+Julia, [https://julialang.org/](https://julialang.org/), es un lenguaje de programación moderno (nacido en 2012) orientado a la programción científica y de código abierto.
 Gracias a sus capacidades metalingüísticas, Julia presenta facilidades propias de lenguajes interpretados tales como Python (facilidad de uso, portabilidad, interoperabilidad, etc.), pero con velocidades de cálculo similares a las de Fortran, C y C++.
 
 Esta es la página del curso de extensión **Introducción a la programación en Julia con aplicaciones científicas**.
