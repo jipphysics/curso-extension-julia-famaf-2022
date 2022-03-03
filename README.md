@@ -31,7 +31,7 @@ Tener en cuenta que el curso volverá a dictarse en el segundo cuatrimestre del 
   - preferentemente, ecuaciones diferenciales ordinarias y parciales.
 
 - Recomendamos, además, conocimientos elementales de LaTeX.
-- A los participantes que se animen, los invitamos a instalar Julia siguiendo el [siguiente tutorial]().
+- A los participantes que se animen, los invitamos a instalar Julia siguiendo el [siguiente tutorial](https://github.com/jipphysics/curso-extension-julia-famaf-2021/blob/main/tutoriales/instalacion.md).
 
 ## Profesores
 
@@ -47,6 +47,7 @@ Tener en cuenta que el curso volverá a dictarse en el segundo cuatrimestre del 
 
 - El curso consistirá en 20 clases de aproximadamente una hora cada una, dictadas entre el 7 y el 11 de Marzo de 2022.
 - Se dictarán 4 clases por día de 17hs a 21hs y por video conferencia a través de la siguiente [sala de google meet](https://meet.google.com/rde-pxtw-jeq).
+- Las clases serán grabadas y eventualmente subidas a la página del curso.
 
 ## Programa del curso
 
