@@ -29,18 +29,14 @@ Tener en cuenta que el curso volverá a dictarse en el segundo cuatrimestre del 
   - cálculo de una y varias variables,
   - probabilid y estadística, y
   - preferentemente, ecuaciones diferenciales ordinarias y parciales.
-
 - Recomendamos, además, conocimientos elementales de LaTeX.
 - A los participantes que se animen, los invitamos a instalar Julia siguiendo el [siguiente tutorial](https://github.com/jipphysics/curso-extension-julia-famaf-2021/blob/main/tutoriales/instalacion.md).
 
 ## Profesores
 
 - Dr. Oscar A. Reula, [oreula@unc.edu.ar](oreula@unc.edu.ar)
-
 - Dr. Edgardo Bonzi, [edgardo.bonzi@unc.edu.ar](edgardo.bonzi@unc.edu.ar)
-
 - Dr. Juan I. Perotti, [juan.perotti@unc.edu.ar](juan.perotti@unc.edu.ar)
-
 - Mag. Pablo E. Montes, [pabloemontes@mi.unc.edu.ar](pabloemontes@mi.unc.edu.ar)
 
 ## Modalidad
