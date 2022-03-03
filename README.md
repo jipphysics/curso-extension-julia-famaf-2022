@@ -10,10 +10,11 @@ El mismo será dictado como curso de extensión de la Facultad de Matemáticas, 
 ## Novedades
 
 - 2022 02 01 : Las inscripciones se encuentran abiertas.
+- 2022 03 01 : Las inscripciones se encuentran cerradas.
 
 ## Inscripción
 
-Las inscripciones estarán abiertas hasta el Lunes 21 de Febrero de 2022, y deben realizarse via el siguiente [formulario de inscripción](https://forms.gle/ZA4ByWUeiuWrY6vp9).
+Las inscripciones estarán abiertas hasta el 01 de Marzo de 2022, y deben realizarse via el siguiente [formulario de inscripción](https://forms.gle/ZA4ByWUeiuWrY6vp9).
 
 El curso posee un cupo máximo de 100 alumnos. Si el número de inscriptos supera el cupo, se recurrirá a un proceso de selección basado en el siguiente [criterio de selección](https://docs.google.com/document/d/10OwpXtlybIlmYAKn5CIKOpll0pWEm1MmwwdrGSvHiSw/edit?usp=sharing).
 
@@ -44,10 +45,9 @@ Recomendamos, además, conocimientos elementales de LaTeX.
 
 ## Modalidad
 
-Todas las clases se dictarán por video conferencia a través de salas de google meet.
-Consistirán de 20 clases de aproximadamente una hora cada una.
-Se dictarán 4 clases por día, de 17hs a 21hs y en la semana del 7 al 11 de Marzo (horarios y fechas sujetas a posibles cambios).
+El curso consistirá en 20 clases de aproximadamente una hora cada una, dictadas entre el 7 y el 11 de Marzo de 2022. Se dictarán 4 clases por día de 17hs a 21hs y por video conferencia a través de la siguiente [sala de google meet](https://meet.google.com/rde-pxtw-jeq).
 
 ## Programa del curso
 
 Para mayor información, lea el [programa tentativo](https://drive.google.com/file/d/1bP7fOeJiQx999AnlGOw3oKL2CMiM7k0-/view?usp=sharing) del curso.
+El proximo Sábado (5 de Marzo), estaremos actualiando el programa con la versión definitiva.
