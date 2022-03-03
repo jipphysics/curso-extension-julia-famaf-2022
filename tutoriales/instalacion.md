@@ -1,4 +1,4 @@
-## Cómo instalar Juila con su Jupyter y algunas primeras nociones de uso.
+## Cómo instalar Juila, Jupyter y el paquete Plots
 
 Instrucciones para la instalación específicas de Julia a cada sistema operativo pueden ser encontradas en [https://julialang.org/downloads/platform/](https://julialang.org/downloads/platform/). Aquí mostramos los pasos para el caso de Xubuntu Linux.
 
