@@ -24,14 +24,14 @@ Tener en cuenta que el curso volverá a dictarse en el segundo cuatrimestre del 
 ## Requisitos
 
 - Conocimientos previos de programación, preferentemente en alguno de los siguientes lenguajes: Julia, Python, Fortran, C, C++, R y/o Matlab.
-
 - Conocimientos elementales de:
   - algebra lineal, 
   - cálculo de una y varias variables,
   - probabilid y estadística, y
   - preferentemente, ecuaciones diferenciales ordinarias y parciales.
 
-Recomendamos, además, conocimientos elementales de LaTeX.
+- Recomendamos, además, conocimientos elementales de LaTeX.
+- A los participantes que se animen, los invitamos a instalar Julia siguiendo el [siguiente tutorial]().
 
 ## Profesores
 
@@ -45,7 +45,8 @@ Recomendamos, además, conocimientos elementales de LaTeX.
 
 ## Modalidad
 
-El curso consistirá en 20 clases de aproximadamente una hora cada una, dictadas entre el 7 y el 11 de Marzo de 2022. Se dictarán 4 clases por día de 17hs a 21hs y por video conferencia a través de la siguiente [sala de google meet](https://meet.google.com/rde-pxtw-jeq).
+- El curso consistirá en 20 clases de aproximadamente una hora cada una, dictadas entre el 7 y el 11 de Marzo de 2022.
+- Se dictarán 4 clases por día de 17hs a 21hs y por video conferencia a través de la siguiente [sala de google meet](https://meet.google.com/rde-pxtw-jeq).
 
 ## Programa del curso
 
