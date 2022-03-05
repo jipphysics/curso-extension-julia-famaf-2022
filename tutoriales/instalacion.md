@@ -2,6 +2,10 @@
 
 Instrucciones para la instalación específicas de Julia a cada sistema operativo pueden ser encontradas en [https://julialang.org/downloads/platform/](https://julialang.org/downloads/platform/). Aquí mostramos los pasos para el caso de Xubuntu Linux.
 
+Alternativamente, Oscar nos ofrece un tutorial muy bueno [https://github.com/reula/Metodos_Numericos_2022/blob/main/Tutoriales/Julia_Install.md](https://github.com/reula/Metodos_Numericos_2022/blob/main/Tutoriales/Julia_Install.md).
+
+Continuemos con el tutorial:
+
 1. Ir a [https://julialang.org/downloads/](https://julialang.org/downloads/).
         
 2. Baje la versión acorde al sistema operativo de su computadora (Windows, Linux, etc.). Hoy en día casi todas las computadoras son de 64 bits, pero por las dudas constate en su caso si su sistema operativo soporta aplicaciones de 32 o 64 bits y baje el que corresponda. En este tutorial consideraremos el caso de un Linux generico de 64 bits (ej. Ubunut), por lo que descargaremos el archivo `julia-1.7.2-linux-x86_64.tar.gz` (ver imagen).
