@@ -11,6 +11,7 @@ El mismo será dictado como curso de extensión de la Facultad de Matemáticas, 
 
 - 2022 02 01 : Las inscripciones se encuentran abiertas.
 - 2022 03 01 : Las inscripciones se encuentran cerradas.
+- 2022 03 05 : Ya está disponible la [sala de google meet](https://meet.google.com/rde-pxtw-jeq).
 
 ## Inscripción
 
