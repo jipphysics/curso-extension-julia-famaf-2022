@@ -11,7 +11,7 @@ El mismo será dictado como curso de extensión de la Facultad de Matemáticas, 
 
 - 2022 02 01 : Las inscripciones se encuentran abiertas.
 - 2022 03 01 : Las inscripciones se encuentran cerradas.
-- 2022 03 05 : Ya está disponible la [sala de google meet](https://meet.google.com/rde-pxtw-jeq).
+- 2022 03 05 : Ya está disponible la [sala de google meet][ref-sala-meet].
 
 ## Inscripción
 
@@ -43,10 +43,12 @@ Tener en cuenta que el curso volverá a dictarse en el segundo cuatrimestre del 
 ## Modalidad
 
 - El curso consistirá en 20 clases de aproximadamente una hora cada una, dictadas entre el 7 y el 11 de Marzo de 2022.
-- Se dictarán 4 clases por día de 17hs a 21hs y por video conferencia a través de la siguiente [sala de google meet](https://meet.google.com/rde-pxtw-jeq).
+- Se dictarán 4 clases por día de 17hs a 21hs y por video conferencia a través de la siguiente [sala de google meet][ref-sala-meet].
 - Las clases serán grabadas y eventualmente subidas a la página del curso.
 
 ## Programa del curso
 
 Para mayor información, lea el [programa tentativo](https://drive.google.com/file/d/1bP7fOeJiQx999AnlGOw3oKL2CMiM7k0-/view?usp=sharing) del curso.
 El proximo Sábado (5 de Marzo), estaremos actualiando el programa con la versión definitiva.
+
+[ref-sala-meet]: https://meet.google.com/rde-pxtw-jeq
