@@ -1,0 +1,342 @@
+### A Pluto.jl notebook ###
+# v0.12.20
+
+using Markdown
+using InteractiveUtils
+
+# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
+macro bind(def, element)
+    quote
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : missing
+        el
+    end
+end
+
+# ╔═╡ b0f07f70-709d-11eb-18c4-c3e18fe313b2
+using Statistics, Plots, LsqFit, PlutoUI, LinearAlgebra
+
+# ╔═╡ b20f440a-70b5-11eb-39f3-c7722d706c17
+md"# Fiteo de funciones: Cuadrados mínimos"
+
+# ╔═╡ 96d389ac-711f-11eb-1ecc-b5539d6495cb
+md"Dada dos series de datos, $\{x_i\}$ y $\{y_i\}$, queremos encontrar si hay una relación entre ellos. Comenzaremos con el caso donde se busca una relación lineal.
+$y_i = a_1 + a_2 * x_i$. A modo de ejemplo contruiremos los datos empleando la relación lineal con parámetros dados sumandoles una componente pequeña aleatoria.
+La componente aleatoria tiene media de cero y $\sigma = 1$.
+
+$$y_i = a_1 + a_2 * x_i + \epsilon Rand$$
+Para corroborar esto último graficamos su histograma.
+Para la variable independiente tomamos un conjunto equiespaciados de puntos.
+"
+
+# ╔═╡ 239adf24-7121-11eb-1db9-df285eef255c
+md"La idea ahora es reencontrar los parámetros $(a1,a2)$ a partir de los dados, $(xdata,ydata)$. Para simplificar la búsqueda de estos parámetros eliminamos uno de ellos trasladando los datos de manera que los promedios de ambos datos sean nulos. 
+Es decir, definimos nuevos datos como $xdata_0 = xdata - <xdata>$, etc. Donde $<>$ significa tomar el promedio. De esa forma, en las nuevas variables la relación será del tipo $y_i = a_2 x_i$. Luego de encontrar $a_2$ es simple reconstituir las variables originales y obtener $a_1$ usando la igualdad con los promedios."
+
+# ╔═╡ 1e3c30cc-7122-11eb-12b0-3b2aa0953ac2
+md"### Encontrando los parámetros:
+
+Utilizaremos tres formas de encontrar los parámetros en orden de sofisticación.
+
+	1. Gráficamente: Trazamos rectas que pasan por el origen con distintas pendientes y vemos cual aproxima mejor nuestros datos. Para ello generamos un Slider que nos da distintos valores para los parámetros.
+"
+
+# ╔═╡ 42ca4316-70a0-11eb-2bae-fbc5b3472332
+@bind aa Slider(-1:0.2:4; default=2, show_value=true)
+
+# ╔═╡ a39ffdd4-7122-11eb-30bd-13b8618ed938
+md"
+	2. Definimos una función distancia entre los puntos datos y distintas rectas y buscamos su mínimo. Para ello usamos la distancia Euclídea. Vemos a simple vista que el mínimo esta justamente para el valor del parámetro fijado en los datos. 
+" 
+
+# ╔═╡ 066ccf32-70a1-11eb-2264-c1d98968804f
+function distance(a, x, y)
+	return sqrt((y .- a .*x)'*(y .- a .*x))
+	#return sqrt(sum.((y .- a .*x).^2)) 
+end
+
+# ╔═╡ 56c40a90-7123-11eb-33e3-09d683e8978b
+md" Usando la función findmin() podemos ajustar el resultado a un valor más preciso. Para ello evaluamos la función distancia en muchos puntos uniformente distribuidos del parámetro y buscamos el lugar donde el vector de estas cantidades es mínimo y con el encontramos el parámetro. " 
+
+# ╔═╡ 2dba09b2-70a4-11eb-0cc4-c9c479db808a
+md" 
+
+	3. Calculamos el mínimo analíticamente.
+
+Para mayor generalidad volvemos al problema original (sin trasladarlos). 
+Dado los datos xdata y ydata tenemos una distancia, función de dos parámetros, $[p_1, p_2]$, 
+
+$d(p_1,p_2)^2 = \sum_i (y_i - (p_1 + p_2 * x_i))^2$
+
+Esta es una función cuadrática en $p_1$ y $p_2$, y por lo tanto suave. 
+Usamos aquí el cuadrado de la distancia pues el mínimo coincide con el de su cuadrado y es más simple para trabajar, además es suave incluso cuando la distancia se anula. Su mínimo estará en el único punto donde su derivada se anula con respecto a cada uno de los parámetros:
+
+$\partial_{p_1} d(p_1,p_2) = \partial_{p_2} d(p_1,p_2) = 0$
+
+Desarrollando los cuadrados y sumando vemos que:
+
+$$d(p_1,p_2)^2 = \sum_i [y_i^2 - 2 y_i (p_1 + p_2 * x_i) + (p_1 + p_2 * x_i)^2]$$
+
+$$= \sum_i (y_i^2) + p_1^2 * N   - 2p_1 \sum_i y_i + 2p_1 p_2 \sum_i x_i + p_2^2 \sum_i x_i^2 - 2p_2\sum y_ix_i$$
+$$= <y^2> + p_1(b*<1> - 2<y> + 2p_2<x>) + p_2(p_2 <x^2> - 2<xy>)$$,
+
+donde, $<s> := \frac{1}{N}\sum_i^N s_i$.
+
+Por lo tanto,
+
+$$\partial_{p_1} d(p_1,p_2)^2 = 2p_1 - 2<y> + 2p_2 <x>$$
+
+
+y 
+
+$$\partial_{p_2} d(p_1,p_2)^2 = 2p_1 <x> + 2p_2<x^2> - 2<xy>$$.
+
+Resolvemos el sistema $2 \times 2$ para $(p_1, p_2)$.
+
+"
+
+
+
+# ╔═╡ 8d22abc2-70b1-11eb-0b52-2d05ad1ba312
+@bind a2 Slider(-3:6; default = 2, show_value=true)
+
+# ╔═╡ e9d629e0-70b1-11eb-213a-5d609433e4de
+@bind a1 Slider(-2:4; default = 1, show_value=true)
+
+# ╔═╡ fe4f6088-709d-11eb-2e70-bf9c04887219
+begin
+	ϵ = 0.1
+	#a1 = 1.
+	#a2 = 2.
+	xdata = range(1, stop=3, length=200)
+	ydata = a1 .+ a2 .* xdata+ ϵ * randn(length(xdata))
+	histogram(randn(length(xdata)))
+end
+
+# ╔═╡ 26958b94-709e-11eb-193c-abd32211f111
+scatter(xdata,ydata, alpha = 0.5, frame_style=:origin, label="data points", leg=:topleft, xlabel="xdata", ylabel="ydata")
+
+# ╔═╡ a05cabe0-70a0-11eb-3a6f-13a03b009f10
+begin
+	x_s = xdata .- sum(xdata)/length(xdata)
+	y_s = ydata .- sum(ydata)/length(ydata)
+	scatter(x_s,y_s, alpha = 0.5, frame_style=:origin, label="data points", leg=:topleft, xlabel="xdata", ylabel="ydata")
+	plot!(x_s, a2 .* x_s, linewidth = 4)
+end
+
+# ╔═╡ 77b6fb56-709f-11eb-3116-3fe183335bcc
+begin
+	scatter(x_s,y_s, alpha = 0.5, frame_style=:origin, label="data points", leg=:topleft, xlabel="xdata", ylabel="ydata")
+	plot!(x_s, aa .* x_s, linewidth = 4)
+end
+
+# ╔═╡ 4682e8e0-70a1-11eb-0963-078eee9410e4
+distance(2, x_s, y_s)
+
+# ╔═╡ 69b258be-70a1-11eb-08bf-2bf580c6a1e8
+begin
+	r = range(-1., stop=2*a2, length = 200)
+	s = [distance(x, x_s, y_s) for x ∈ r]
+	#plot(r, distance(r, x_s, y_s))
+	plot(r,s)
+end
+
+# ╔═╡ 9af192c8-711e-11eb-002f-df71037526be
+r[findmin(s)[2]]
+
+# ╔═╡ ebfefe88-70a8-11eb-1969-a3ae75cf72cc
+begin
+	A = zeros(2,2)
+	f = zeros(2)
+	N = ones(length(xdata))
+	A[1,1] = 1
+	A[1,2] = xdata'*N / length(xdata)
+	A[2,1] = A[1,2]
+	A[2,2] = xdata'*xdata / length(xdata)
+	
+	f[1] = ydata'*N  / length(xdata)
+	f[2] = xdata'*ydata / length(xdata)
+end
+
+# ╔═╡ ccc82b18-70b0-11eb-112d-a503d66b6b33
+p = f' / A
+
+# ╔═╡ 333cf37e-70b1-11eb-1616-63d971f03a66
+begin
+	scatter(xdata,ydata, alpha = 0.5, frame_style=:origin, label="data points", leg=:topleft, xlabel="xdata", ylabel="ydata")
+	plot!(xdata, p[1].+ p[2].*xdata ,  linewidth = 4)
+end
+
+# ╔═╡ dbae23a6-709e-11eb-255c-6b246a1d82d9
+begin
+	scatter(xdata,ydata, alpha = 0.5, frame_style=:origin, label="data points", leg=:topleft, xlabel="xdata", ylabel="ydata")
+	plot!(xdata, a1 .+ a2 .* xdata, linewidth = 4)	
+end
+
+# ╔═╡ 2452d0fe-70b4-11eb-1682-fddd1a7dd41d
+md" El error en la aproximación de cuadrados mínimos es la distancia dividida por el número de puntos, es decir:
+
+$e = \frac{ \sqrt{\sum^N_i (y_i - (p_1 + p_2*x_i)^2)} }{N}$
+"
+
+# ╔═╡ e0be0184-70b4-11eb-2025-091a431f9c07
+sqrt(sum((ydata - p[1].*xdata .+ p[2]).^2))/length(xdata)
+
+# ╔═╡ 3cd53230-70b5-11eb-2fe6-6d16cba4e845
+md"**Falta error en los parámetros!**
+"
+
+# ╔═╡ 5d997418-70b5-11eb-05f9-37cd5c59276b
+md"## Fiteo de funciones no lineales
+Ahora vamos a emplear un paquete de Julia, **LsqFit**, para encontrar fiteos muy generales a conjuntos de datos. 
+
+Primero repetiremos la cuenta con el fiteo lineal y luego veremos uno no lineal.
+
+Para usar el paquete debemos definir un *modelo*, que es simplemente la función que proponemos para aproximar los datos, la cual dependerá de parámetros libres que iremos ajustando de acuerdo a los datos presentes. Además debemos dar algunos valores iniciales de estos parámetros. La distancia se va minimizando a partir de un algoritmo de minimización iterativo conocido como *Levenberg Marquardt*.
+
+Para el caso lineal ya trabajado proponemos entonces: 
+"
+
+# ╔═╡ 095d3f68-709e-11eb-0e5c-d987f6a027e7
+begin
+	p0 = [0.5, 0.5]
+	@. model(x, p) = p[1] + x*p[2]
+	#@. model(x, p) = p[1]*exp(-x*p[2])
+end
+
+# ╔═╡ 65605e72-70ca-11eb-2442-1b524e2a3be3
+begin
+	fit = curve_fit(model, xdata, ydata, p0);
+	fit.param
+end
+
+# ╔═╡ 8357e8f8-7126-11eb-1853-19050526a4fe
+md"Además de los parámetros encontrados la variable fit tiene más información, como por ejemplo la matriz de covarianza, la cual nos da un error estadístico para los parámetros. Para ver los significados de estas estimaciones de error es preciso conocer un poco más de estadística." 
+
+# ╔═╡ 10167b44-70cb-11eb-18aa-cfb3b8bf7892
+cov = estimate_covar(fit)
+
+# ╔═╡ 346f04c0-70cb-11eb-3bd9-7ba4d985e0a2
+#se = standard_error(fit)
+#se = sqrt(cov)
+sqrt(Diagonal(cov))
+
+# ╔═╡ 70d205fc-70cb-11eb-1f96-4f1df265c5f5
+margin_of_error = margin_error(fit, 0.1)
+
+# ╔═╡ b02c7046-7127-11eb-34e6-0f3a88b50127
+confidence_intervals = confidence_interval(fit, 0.1)
+
+# ╔═╡ b3827416-70cd-11eb-0c47-5b98b59dd367
+md"## Un caso no lineal"
+
+# ╔═╡ cbe333c4-70cd-11eb-2b1a-31f730411017
+begin
+	@. model_nl(x, p) = p[1]*exp(x*p[2])
+	#ydata_nl = zeros(length(xdata))
+	ydata_nl = model_nl(xdata .+ ϵ .*rand(length(xdata)), [4.0, -2.0])  .+ 0.2 .* ϵ .*rand(length(xdata))
+end
+
+# ╔═╡ ef2e998e-70cf-11eb-0624-ad174268eeea
+scatter(xdata, ydata_nl, alpha = 0.5, label="data points", leg=:topleft, xlabel="xdata", ylabel="ydata")
+
+# ╔═╡ 371abd68-70d0-11eb-2f08-1f554c7610e6
+fit_nl = curve_fit(model_nl, xdata, ydata_nl, p0); fit_nl.param
+
+# ╔═╡ 6d72f29a-70d0-11eb-14dd-3beaf78a77e1
+begin
+	scatter(xdata, ydata_nl, alpha = 0.5, label="data points", leg=:topleft, xlabel="xdata", ylabel="ydata")
+	plot!(xdata, model_nl(xdata,fit_nl.param), linewidth = 3)
+end
+
+# ╔═╡ 196d6940-70d1-11eb-1606-af5fbff749de
+begin
+	cov_nl = estimate_covar(fit_nl)
+	se = sqrt(Diagonal(cov_nl))
+end
+
+# ╔═╡ 8e46004a-7128-11eb-3d15-f18f02ff47e2
+md"## Ejercicio"
+
+# ╔═╡ a9d09e82-712e-11eb-31ee-bf08c50ec461
+begin
+	t = (1 .+rand(1000)).*100
+	T = [sin(2*π*tt/13 + 1.2) for tt ∈ t]# 0:0.1:100]
+	T = T +0.6*rand(length(T))
+	scatter(t,T)
+	#tide_data = [t,T]
+	#tide_data[:,1]
+end
+
+# ╔═╡ 66876604-7130-11eb-28fd-e1d88d33779e
+begin
+	#import Pkg; Pkg.add("JLD2")
+	#using CSV
+	using FileIO
+	#using JLD2
+	tide_data = [t T]'
+	#tide_data[:,5]
+	save("tide_data.jld2", "tide", tide_data)
+end
+
+# ╔═╡ 2df5f59c-7134-11eb-39c2-b753c2903d61
+#tide2 = load("tide_data.jld2", "tide")
+tide2 = load(download("https://drive.google.com/file/d/1wDLH0rqigzWXH_nSzqCG0kLobjGfd7Rc"), "tide")
+
+# ╔═╡ 65774492-7134-11eb-35c2-39817e784ae1
+begin
+	xt = tide2[1,:]
+	yt = tide2[2,:]
+	scatter(xt,yt)
+end
+
+# ╔═╡ 8e2dca94-7140-11eb-23db-07081a2000eb
+
+
+# ╔═╡ Cell order:
+# ╟─b20f440a-70b5-11eb-39f3-c7722d706c17
+# ╠═b0f07f70-709d-11eb-18c4-c3e18fe313b2
+# ╟─96d389ac-711f-11eb-1ecc-b5539d6495cb
+# ╠═fe4f6088-709d-11eb-2e70-bf9c04887219
+# ╠═26958b94-709e-11eb-193c-abd32211f111
+# ╠═dbae23a6-709e-11eb-255c-6b246a1d82d9
+# ╟─239adf24-7121-11eb-1db9-df285eef255c
+# ╠═a05cabe0-70a0-11eb-3a6f-13a03b009f10
+# ╠═1e3c30cc-7122-11eb-12b0-3b2aa0953ac2
+# ╠═77b6fb56-709f-11eb-3116-3fe183335bcc
+# ╠═42ca4316-70a0-11eb-2bae-fbc5b3472332
+# ╟─a39ffdd4-7122-11eb-30bd-13b8618ed938
+# ╠═066ccf32-70a1-11eb-2264-c1d98968804f
+# ╠═4682e8e0-70a1-11eb-0963-078eee9410e4
+# ╠═69b258be-70a1-11eb-08bf-2bf580c6a1e8
+# ╟─56c40a90-7123-11eb-33e3-09d683e8978b
+# ╠═9af192c8-711e-11eb-002f-df71037526be
+# ╟─2dba09b2-70a4-11eb-0cc4-c9c479db808a
+# ╠═ebfefe88-70a8-11eb-1969-a3ae75cf72cc
+# ╠═ccc82b18-70b0-11eb-112d-a503d66b6b33
+# ╠═333cf37e-70b1-11eb-1616-63d971f03a66
+# ╠═8d22abc2-70b1-11eb-0b52-2d05ad1ba312
+# ╠═e9d629e0-70b1-11eb-213a-5d609433e4de
+# ╟─2452d0fe-70b4-11eb-1682-fddd1a7dd41d
+# ╠═e0be0184-70b4-11eb-2025-091a431f9c07
+# ╟─3cd53230-70b5-11eb-2fe6-6d16cba4e845
+# ╟─5d997418-70b5-11eb-05f9-37cd5c59276b
+# ╠═095d3f68-709e-11eb-0e5c-d987f6a027e7
+# ╠═65605e72-70ca-11eb-2442-1b524e2a3be3
+# ╟─8357e8f8-7126-11eb-1853-19050526a4fe
+# ╠═10167b44-70cb-11eb-18aa-cfb3b8bf7892
+# ╠═346f04c0-70cb-11eb-3bd9-7ba4d985e0a2
+# ╠═70d205fc-70cb-11eb-1f96-4f1df265c5f5
+# ╠═b02c7046-7127-11eb-34e6-0f3a88b50127
+# ╠═b3827416-70cd-11eb-0c47-5b98b59dd367
+# ╠═cbe333c4-70cd-11eb-2b1a-31f730411017
+# ╠═ef2e998e-70cf-11eb-0624-ad174268eeea
+# ╠═371abd68-70d0-11eb-2f08-1f554c7610e6
+# ╠═6d72f29a-70d0-11eb-14dd-3beaf78a77e1
+# ╠═196d6940-70d1-11eb-1606-af5fbff749de
+# ╠═8e46004a-7128-11eb-3d15-f18f02ff47e2
+# ╠═a9d09e82-712e-11eb-31ee-bf08c50ec461
+# ╠═66876604-7130-11eb-28fd-e1d88d33779e
+# ╠═2df5f59c-7134-11eb-39c2-b753c2903d61
+# ╠═65774492-7134-11eb-35c2-39817e784ae1
+# ╠═8e2dca94-7140-11eb-23db-07081a2000eb
