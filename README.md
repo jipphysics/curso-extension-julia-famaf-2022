@@ -49,6 +49,5 @@ Tener en cuenta que el curso volverá a dictarse en el segundo cuatrimestre del 
 ## Programa del curso
 
 Para mayor información, lea el [programa](https://drive.google.com/file/d/1zA6QPqySAWARbmPa0FL3_T_1gai1F8Vt/view?usp=sharing) del curso.
-El proximo Sábado (5 de Marzo), estaremos actualiando el programa con la versión definitiva.
 
 [ref-sala-meet]: https://meet.google.com/rde-pxtw-jeq
