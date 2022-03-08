@@ -12,6 +12,7 @@ El mismo será dictado como curso de extensión de la Facultad de Matemáticas, 
 - 2022 02 01 : Las inscripciones se encuentran abiertas.
 - 2022 03 01 : Las inscripciones se encuentran cerradas.
 - 2022 03 05 : Ya está disponible la [sala de google meet][ref-sala-meet].
+- 2022 03 08 : Ya están disponibles los **videos de las clases** en la siguiente [carpeta de google drive][videos-clases].
 
 ## Inscripción
 
@@ -51,3 +52,4 @@ Tener en cuenta que el curso volverá a dictarse en el segundo cuatrimestre del 
 Para mayor información, lea el [programa](https://drive.google.com/file/d/1zA6QPqySAWARbmPa0FL3_T_1gai1F8Vt/view?usp=sharing) del curso.
 
 [ref-sala-meet]: https://meet.google.com/rde-pxtw-jeq
+[videos-clases]: https://drive.google.com/drive/folders/1ivMWkozOz-KexO_nY7q-KZhYhVR9Hn-P?usp=sharing
