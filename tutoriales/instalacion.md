@@ -4,6 +4,12 @@ Instrucciones para la instalación específicas de Julia a cada sistema operativ
 
 Alternativamente, Oscar nos ofrece un tutorial muy bueno [https://github.com/reula/Metodos_Numericos_2022/blob/main/Tutoriales/Julia_Install.md](https://github.com/reula/Metodos_Numericos_2022/blob/main/Tutoriales/Julia_Install.md).
 
+Recomendaciones generales antes de comenzar:
+
+* En Ubuntu, **NO** instalen Julia via `apt-get`, `synaptic` o el *Software Manager*. Esto les instalará una versión desactualizada de Julia y les traeará problemas.
+
+* **NO** instalar Julia desde una instalación previa de Jupyter, Anaconda o algo parecido. Dejen que la instalación de Julia debajo indicada encuentre/instale a `conda` durante la instalación de `IJulia`.
+
 Continuemos con el tutorial:
 
 1. Ir a [https://julialang.org/downloads/](https://julialang.org/downloads/).
