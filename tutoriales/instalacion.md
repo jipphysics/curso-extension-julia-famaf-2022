@@ -6,9 +6,9 @@ Alternativamente, Oscar nos ofrece un tutorial muy bueno [https://github.com/reu
 
 Recomendaciones generales antes de comenzar:
 
-* En Ubuntu, **no** instalen Julia via `apt-get`, `synaptic` o el *Software Manager*. Esto les instalará una versión desactualizada de Julia y les traeará problemas.
+* En Ubuntu, **NO** instalen Julia via `apt-get`, `synaptic` o el *Software Manager*. Esto les instalará una versión desactualizada de Julia y les traeará problemas.
 
-* **No** instalar Julia desde una instalación previa de Jupyter, Anaconda o algo parecido. Dejen que la instalación de Julia debajo indicada encuentre/instale a `conda` durante la instalación de `IJulia`.
+* **NO** instalar Julia desde una instalación previa de Jupyter, Anaconda o algo parecido. Dejen que la instalación de Julia debajo indicada encuentre/instale a `conda` durante la instalación de `IJulia`.
 
 Continuemos con el tutorial:
 
