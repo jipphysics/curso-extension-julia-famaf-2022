@@ -26,7 +26,6 @@ intervalo = (0,1)
 t, y = ODEproblem(Euler, f, y0, intervalo, 101)
 ```
 """
-
 function ODEproblem(Method,f,y0::AbstractArray,intervalo,N)
     (a,b) = intervalo
     h = (b-a)/(N-1)
